@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rock Paper Scissors Game</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Rock Paper Scissors Game</h1>
+
+  <button class="choice-button" onclick="
+  let computerChoice = generateComputerChoice();
+  let resultMsg = getResult('Rock', computerChoice);
+  showResult('Rock', computerChoice, resultMsg);
+  ">
+    <img src="image/Rock.png" alt="Rock Image" class="choice-image">  
+  </button>
+
+  <button class="choice-button" onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Paper', computerChoice);
+    showResult('Paper', computerChoice, resultMsg);
+  ">
+    <img src="image/p.png" alt="Paper Image" class="choice-image">  
+  </button>
+
+  <button class="choice-button" onclick="
+    computerChoice = generateComputerChoice();
+    resultMsg = getResult('Scissors', computerChoice);
+    showResult('Scissors', computerChoice, resultMsg);
+  ">
+    <img src="image/S.png" alt="Scissors Image" class="choice-image">
+  </button>
+
+  <h3 id="user-move"></h3>
+  <h3 id="computer-move"></h3>
+  <h3 id="result"></h3>
+  <h3 id="score"></h3>
+
+  <button class="reset-button" onclick="localStorage.clear()
+      resetScore();
+  ">Reset</button>
+
+  <script src="index.js"></script>
+</body>
+</html>
