@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer and Items Form</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="form-container">
+    <!-- Section: Customer Name & Date -->
+    <div class="form-section">
+      <h3>Select Customer Name & Date</h3>
+      <div class="form-group">
+        <label for="customerName">Select Customer Name</label>
+        <input type="text" id="customerName" placeholder="Select Customer Name" disabled>
+      </div>
+      <div class="form-group">
+        <label for="date">Date</label>
+        <input type="date" id="date" value="10/11/2024" >
+      </div>
+    </div>
+<hr>
+    <!-- Section: Items -->
+    <div id="itemsContainer">
+      <div class="form-section" id="itemSection1">
+        <h3>Select Items</h3>
+        <div class="form-group">
+          <label for="itemName1">Select Items Name</label>
+          <input type="text" id="itemName1" placeholder="Select Items Name" disabled>
+        </div>
+        <div class="form-group">
+          <label for="sellPrice1">Sell Price:</label>
+          <input type="number" id="sellPrice1" >
+        </div>
+        <div class="form-group">
+          <label for="quantity1">Quantity:</label>
+          <input type="number" id="quantity1" v>
+        </div>
+
+
+        <div class="form-group">
+            <div class="discountdiv">
+            <label for="discountType1">Discount:</label>
+                <select id="discountType1">
+                    <option value="amount" selected>₹</option>
+                    <option value="percent">%</option>
+                  </select>
+            </div>
+            <input type="number" id="discount1">
+          </div>
+          
+        <div class="form-group">
+          <label for="totalPrice1">Total Price:</label>
+          <input type="number" id="totalPrice1"  readonly>
+        </div>
+      </div>
+
+      <div class="button-group">
+        <button type="button" id="addItem">Add Items</button>
+      </div>
+      
+<hr>
+       <!-- Total Price -->
+       <h3>Total Price</h3>
+    </div id="totalPriceContainer">
+        <div class="form-group">
+            <label for="discount1">Discount:</label>
+            <input type="number" id="discount1" >
+        </div>
+        <div class="form-group">
+            <label for="totalPrice1">Total Price:</label>
+            <input type="number" id="totalPrice1"  readonly>
+        </div>
+    <div>
+
+    </div>
+
+    <div class="button-group">
+      <button type="button" id="Submetadd">Submet</button>
+    </div>
+
+    
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
