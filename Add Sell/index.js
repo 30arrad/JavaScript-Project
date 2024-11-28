@@ -22,11 +22,16 @@ document.getElementById('submit-button').addEventListener('click', () => {
     button.addEventListener('click', () => {
       const newRow = itemsTable.insertRow();
       newRow.innerHTML = `
-        <td><input type="text" placeholder="Item name"></td>
-        <td><input type="number" value="0"></td>
-        <td><input type="number" placeholder="Price"></td>
-        <td><button class="btn-green">Add Items</button></td>
+        <tbody id="items-table">
+          <tr>
+            <td><input type="text" value="Toyaa" ></td>
+            <td><input type="number" value="0"></td>
+            <td><input type="number" value="0" ></td>
+            <td><button class="btn-green">Add Items</button></td>
+          </tr>
+        </tbody>
       `;
     })
+
   );
   
