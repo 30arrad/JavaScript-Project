@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h1>InfinitiBit</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Forms</a></li>
+          <li><a href="#">Tables</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="header">
+        <div class="user-info">
+          <span>Thomas Anree</span>
+          <span>UX Designer</span>
+        </div>
+      </header>
+
+      <!-- Metrics -->
+      <section class="metrics">
+        <div class="card">
+          <h3>Total Views</h3>
+          <p>$3,456K</p>
+          <span class="change">+0.43%</span>
+        </div>
+        <div class="card">
+          <h3>Total Profit</h3>
+          <p>$45,2K</p>
+          <span class="change">+4.35%</span>
+        </div>
+        <div class="card">
+          <h3>Total Products</h3>
+          <p>2,450</p>
+          <span class="change">+2.95%</span>
+        </div>
+        <div class="card">
+          <h3>Total Users</h3>
+          <p>3,456</p>
+          <span class="change">+0.95%</span>
+        </div>
+      </section>
+
+      <!-- Charts -->
+      <section class="charts">
+        <div id="line-chart" class="chart"></div>
+        <div id="bar-chart" class="chart"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
