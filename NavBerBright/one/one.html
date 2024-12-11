@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-gray-900 text-white flex flex-col">
+            <div class="p-4 text-lg font-semibold">
+                <span class="text-indigo-400">Brand</span> Dashboard
+            </div>
+            <nav class="flex-1">
+                <ul>
+                    <li class="p-4 hover:bg-gray-700">
+                        <a href="#" class="flex items-center space-x-3">
+                            <span class="material-icons">home</span>
+                        </a>
+                    </li>
+                    <li class="p-4 hover:bg-gray-700">
+                        <a href="#" class="flex items-center space-x-3">
+                            <span class="material-icons">group</span>
+                        </a>
+                    </li>
+                    <li class="p-4 hover:bg-gray-700">
+                        <a href="#" class="flex items-center space-x-3">
+                            <span class="material-icons">folder</span>
+                        </a>
+                    </li>
+                    <li class="p-4 hover:bg-gray-700">
+                        <a href="#" class="flex items-center space-x-3">
+                            <span class="material-icons">calendar_today</span>
+                        </a>
+                    </li>
+                    <li class="p-4 hover:bg-gray-700">
+                        <a href="#" class="flex items-center space-x-3">
+                            <span class="material-icons">description</span>
+                        </a>
+                    </li>
+                    <li class="p-4 hover:bg-gray-700">
+                        <a href="#" class="flex items-center space-x-3">
+                            <span class="material-icons">bar_chart</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="p-4">
+                <a href="#" class="flex items-center space-x-3 hover:bg-gray-700 p-2 rounded">
+                    <span class="material-icons">settings</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Projects</h1>
+                <div class="flex items-center space-x-4">
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        class="border border-gray-300 rounded-lg p-2"
+                    />
+                    <img
+                        src="https://via.placeholder.com/40"
+                        alt="User"
+                        class="w-10 h-10 rounded-full"
+                    />
+                </div>
+            </div>
+            <div class="border-dashed border-2 border-gray-300 h-96 mt-6 flex items-center justify-center text-gray-500">
+                <div class="flex-1">
+                    <div class="max-w-4xl mx-auto bg-cyan-500  p-6 shadow-md rounded-md">
+                      <!-- Top Form -->
+                      <form action="www.google.com" class="bg-blue-100 p-6 rounded-sm ">
+                        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 mb-4">
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Customer Name & ID</label>
+                            <select name="editors" id="" type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4">
+                              <option value="Arrad Ahmed 01">Arrad Ahmed 01</option>
+                              <option value="Bilal Ahmed 02">Bilal Ahmed 02</option>
+                            </select>
+                          </div>
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Date</label>
+                            <input type="date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4">
+                          </div>
+                
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Time</label>
+                            <input type="time" name="time" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4"/>
+                          </div>
+                
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Cash</label>
+                            <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4">
+                          </div>
+                
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Collection</label>
+                            <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4">
+                          </div>
+                
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Discount</label>
+                            <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4">
+                          </div>
+                
+                          <div>
+                            <label id="sell-price-label" class="block text-sm font-medium text-gray-700">Sell Price</label>
+                            <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4" disabled>
+                          </div>
+                
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Price Total</label>
+                            <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4" disabled>
+                          </div>
+                        </div>
+                        <div class="text-right">
+                          <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Submit</button>
+                        </div>
+                      </form>
+                      <hr class="my-6 border-gray-300">
+                      <!-- Items Section -->
+                      <div id="items-container">
+                        <div class="grid grid-cols-4 gap-4 mb-4 items-section relative">
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Items Name</label>
+                            <select name="editors" id="" type="text" class="mt-1 block w-44 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4">
+                              <option value="Arrad Ahmed 01">Toya</option>
+                              <option value="Bilal Ahmed 02">Euro</option>
+                              <option value="Bilal Ahmed 02">Hadner </option>
+                              <option value="Bilal Ahmed 02">Colour</option>
+                              <option value="Bilal Ahmed 02">Raduser</option>
+                              <option value="Bilal Ahmed 02">Putt</option>
+                            </select>
+                          </div>
+              
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">name</label>
+                            <input type="text" class="mt-1 block w-44 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4">
+                          </div>
+                
+                          <div>
+                            <label class="block text-sm font-medium text-gray-700">Quantity</label>
+                            <input type="number" class="mt-1 block w-44 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4">
+                          </div>
+                
+                          <div>
+                            <label id="price-label" class="block text-sm font-medium text-gray-700">Price</label>
+                            <input type="text" class="mt-1 block w-44 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm my-6 border-black border-4">
+                          </div>
+                
+                          <div class="absolute top-0 right-0 mt-2">
+                            <button class="delete-item-btn bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-right">
+                        <button id="add-item-btn" class="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600">Add Items</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </main>
+    </div>
+    <script src="one.js"></script>
+</body>
+</html>
