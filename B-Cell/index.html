@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport Playground Booking Calendar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white py-4 w-full text-center">
+    <h1 class="text-2xl font-bold">Sport Playground Booking</h1>
+  </header>
+
+  <!-- Booking Form and Calendar -->
+  <div class="bg-white shadow-lg rounded-lg p-6 mt-6 w-full max-w-4xl">
+    <!-- Sport Selection -->
+    <div class="mb-4">
+      <label for="sport" class="block text-sm font-medium text-gray-700 mb-1">Choose a Sport</label>
+      <select id="sport" name="sport" class="w-full border border-gray-300 rounded-lg p-2 text-gray-700">
+        <option value="football">Football</option>
+        <option value="basketball">Basketball</option>
+        <option value="tennis">Tennis</option>
+        <option value="badminton">Badminton</option>
+      </select>
+    </div>
+
+    <!-- Calendar -->
+    <div id="calendar" class="mt-6"></div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const sportSelect = document.getElementById('sport');
+
+      // Initialize FullCalendar
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek,timeGridDay'
+        },
+        selectable: true,
+        select: function (info) {
+          const sport = sportSelect.value;
+
+          // Confirmation dialog
+          const confirmed = confirm(`Do you want to book ${sport} on ${info.startStr}?`);
+          if (confirmed) {
+            calendar.addEvent({
+              title: sport,
+              start: info.startStr,
+              allDay: true,
+            });
+            alert(`${sport} booked successfully on ${info.startStr}!`);
+          }
+        },
+        events: [
+          // Example pre-existing bookings
+          { title: 'Football', start: '2025-01-15', allDay: true },
+          { title: 'Tennis', start: '2025-01-18', allDay: true },
+        ],
+        eventColor: '#4caf50',
+      });
+
+      calendar.render();
+    });
+  </script>
+</body>
+</html>
